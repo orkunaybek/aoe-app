@@ -1,0 +1,61 @@
+.unit-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  min-height: 60px;
+  margin: 20px 20px 20px 0;
+  font-weight: 600;
+  border-radius: 10px;
+  background: rgba($color-secondary, 0.5);
+  scroll-snap-align: start;
+
+  .name {
+    font-size: 25px;
+  }
+  .card-bottom {
+    display: flex;
+    align-items: center;
+    .age {
+      flex-basis: 40%;
+      font-size: 20px;
+    }
+    .costs {
+      flex-basis: 60%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .resource {
+        display: flex;
+        flex-basis: 50%;
+        align-items: center;
+        justify-content: flex-start;
+        span {
+          display: block;
+          width: 35px;
+          height: 35px;
+          margin-right: 10px;
+          background-size: contain !important;
+          background-position: center !important;
+          background-repeat: no-repeat !important;
+        }
+        span.wood {
+          background: url(../../assets/images/wood-icon.svg);
+        }
+        span.food {
+          background: url(../../assets/images/food-icon.svg);
+        }
+        span.gold {
+          background: url(../../assets/images/gold-icon.svg);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 967px) {
+  .unit-card {
+    margin-right: 0;
+  }
+}

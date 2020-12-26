@@ -1,0 +1,77 @@
+.units {
+    width: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    .section{
+    margin-bottom: 50px;
+    }
+    &-title{
+        font-size: responsive-font(40, 50);
+        margin-bottom: 20px;
+    }
+    &-filters {
+        .age-filter {
+            .age-items {
+                display: flex;
+                flex-wrap: wrap;
+                flex: 1;
+                justify-content: center;
+                .age-item {
+                    width: 75px;
+                    &:not(:last-child){
+                        margin-right: 15px;
+                    }
+                    svg {
+                        width: 100%;
+                        path {
+                            transition: all 0.2s ease;
+                            fill: $main-light;
+                            &.line {
+                                stroke: $main-light !important;
+                                fill: none !important;
+                            }
+                        }
+                    }
+                    &.active {
+                        svg {
+                            path {
+                                fill: $color-primary !important;
+                                &.line {
+                                    stroke: $color-primary !important;
+                                    fill: none !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-list {
+        position: relative;
+        width: 40%;
+        height: 530px;
+        overflow: auto;
+        scroll-snap-type: y proximity;
+    }
+}
+
+@media (max-width: 967px){
+    .units{
+        flex-direction: column;
+        &-title{
+            text-align: center;
+        }
+        .age-item{
+            &:not(:last-child){
+                margin-right: 0px;
+            }
+            margin: 0 10px
+        }
+        &-list{
+            width: 100%;
+            height: auto;
+        }
+    }
+}

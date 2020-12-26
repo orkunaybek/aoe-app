@@ -1,0 +1,3 @@
+@function responsive-font($minFS, $maxFS, $minWidth: 320, $maxWidth: 1920) {
+    @return calc(#{$minFS * 1px} + #{$maxFS - $minFS} * (100vw - #{$minWidth * 1px}) / #{$maxWidth - $minWidth});
+}
