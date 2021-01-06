@@ -1,5 +1,5 @@
 import Home from '../pages/Home';
-import Units from '../pages/Units';
+import Units from '../pages/Units/Units';
 import UnitDetail from '../pages/UnitDetail';
 
 const routes = [

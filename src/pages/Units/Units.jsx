@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { ReactSVG } from 'react-svg';
-import UnitCard from '../components/UnitCard';
-import ResourceFilter from '../components/ResourceFilter';
+import UnitCard from '../../components/UnitCard/UnitCard';
+import ResourceFilter from '../../components/ResourceFilter';
 
-const darkSvg = require('../assets/images/all-ages.svg');
-const feudalSvg = require('../assets/images/feudal-age.svg');
-const castleSvg = require('../assets/images/castle-age.svg');
-const imperialSvg = require('../assets/images/imperial-age.svg');
-const allSvg = require('../assets/images/all-ages.svg');
+const darkSvg = require('../../assets/images/dark-age.svg');
+const feudalSvg = require('../../assets/images/feudal-age.svg');
+const castleSvg = require('../../assets/images/castle-age.svg');
+const imperialSvg = require('../../assets/images/imperial-age.svg');
+const allSvg = require('../../assets/images/all-ages.svg');
 
-class Units extends Component {
+export class Units extends Component {
   state = {
     activeAge: '',
     ageList: [
@@ -90,7 +90,7 @@ class Units extends Component {
                     }
                   }}
                 >
-                  <ReactSVG src={item.svgPath} />
+                  <ReactSVG src={item.svgPath.toString()} />
                 </div>
               ))}
             </div>

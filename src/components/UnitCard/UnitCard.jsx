@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import audio from '../assets/creation-sound.mp3';
+import audio from '../../assets/creation-sound.mp3';
 
 export default function UnitCard({ unit }) {
   const sound = new Audio(audio);
@@ -27,7 +27,7 @@ export default function UnitCard({ unit }) {
             {Object.keys(unit.cost).map((resource, index) => (
               <div className="resource" key={`cost-${index * 2}`}>
                 <span className={resource.toLocaleLowerCase()} />
-                {unit.cost[resource]}
+                <span className={`${resource.toLowerCase()}-value`}>{unit.cost[resource]}</span>
               </div>
             ))}
           </div>
